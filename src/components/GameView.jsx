@@ -136,7 +136,8 @@ const GameView = ({ user }) => {
       name: "The Guide (Pip the Owl) NPC",
       desc: "Pip is the Mayor of Word Valley and appears as a magical owl. She acts as a guide and tutorial system. She provides vocal guidance and clues to help the player navigate the challenges without revealing the direct answer.",
       placeholder: "bg-amber-700 text-white",
-      letter: "P"
+      letter: "P",
+      image: "/assets/Pip.png"
     },
     {
       name: "The Archmage (NPC)",
