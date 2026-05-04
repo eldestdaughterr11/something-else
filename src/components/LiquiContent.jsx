@@ -96,8 +96,8 @@ const LiquiContent = () => {
                 { hero: 'Suyou', img: '/Suyou.webp', kda: '8/0/2', vs: 'Team Liquid PH', highlight: 'MANIAC', color: 'text-purple-400' },
                 { hero: 'Lancelot', img: '/Lancelot.webp', kda: '3/0/6', vs: 'ONIC PH' },
                 { hero: 'Fanny', img: '/Fanny.webp', kda: '16/0/3', vs: 'Aurora PH' },
-                { hero: 'Hayabusa', img: '/Hayabusa.webp', kda: '7/2/5', vs: 'Team Liquid PH' },
-                { hero: 'Fredrinn', img: '/Fredrinn.webp', kda: '2/1/12', vs: 'Team Liquid PH' },
+                { hero: 'Hayabusa', img: '/Hayabusa.webp', kda: '7/2/5', vs: 'Omega Esports' },
+                { hero: 'Fredrinn', img: '/Fredrinn.webp', kda: '2/1/12', vs: 'Omega Esports' },
                 { hero: 'Suyou', img: '/Suyou.webp', kda: '20/1/8', vs: 'Twisted Minds' }
               ].map((match, idx) => (
                 <div key={idx} className="flex items-center justify-between bg-[#1e2024] p-2 rounded border border-[#2b2d31] hover:bg-[#2a2d32] transition-colors">
