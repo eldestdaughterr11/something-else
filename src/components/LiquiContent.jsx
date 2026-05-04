@@ -93,23 +93,43 @@ const LiquiContent = () => {
             <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-1 border-l-2 border-[#1a3b68]">Recent Match Performance</h3>
             <div className="space-y-2">
               {[
-                { hero: 'Suyou', img: '/Suyou.webp', kda: '8/0/2', vs: 'Team Liquid PH', highlight: 'MANIAC', color: 'text-purple-400' },
+                { 
+                  hero: 'Suyou', 
+                  img: '/Suyou.webp', 
+                  kda: '8/0/2', 
+                  vs: 'Team Liquid PH', 
+                  highlight: 'MANIAC', 
+                  color: 'text-purple-400',
+                  build: ['Flame Retri', 'Hunter Strike', 'Heptaseas', 'Malefic Roar', 'Queen\'s Wings', 'BoD']
+                },
                 { hero: 'Lancelot', img: '/Lancelot.webp', kda: '3/0/6', vs: 'ONIC PH' },
                 { hero: 'Fanny', img: '/Fanny.webp', kda: '16/0/3', vs: 'Aurora PH' },
                 { hero: 'Hayabusa', img: '/Hayabusa.webp', kda: '7/2/5', vs: 'Omega Esports' },
                 { hero: 'Fredrinn', img: '/Fredrinn.webp', kda: '2/1/12', vs: 'Omega Esports' },
                 { hero: 'Suyou', img: '/Suyou.webp', kda: '20/1/8', vs: 'Twisted Minds' }
               ].map((match, idx) => (
-                <div key={idx} className="flex items-center justify-between bg-[#1e2024] p-2 rounded border border-[#2b2d31] hover:bg-[#2a2d32] transition-colors">
-                  <div className="flex items-center gap-2">
-                    <img src={match.img} alt={match.hero} className="w-8 h-8 rounded-sm object-cover border border-[#3b3d41]" />
-                    <div className="flex flex-col">
-                      <span className="text-[11px] font-bold text-white">{match.hero}</span>
-                      {match.highlight && <span className={`text-[9px] font-black tracking-tighter ${match.color}`}>{match.highlight}</span>}
+                <div key={idx} className="flex flex-col bg-[#1e2024] p-2 rounded border border-[#2b2d31] hover:bg-[#2a2d32] transition-colors gap-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <img src={match.img} alt={match.hero} className="w-8 h-8 rounded-sm object-cover border border-[#3b3d41]" />
+                      <div className="flex flex-col">
+                        <span className="text-[11px] font-bold text-white">{match.hero}</span>
+                        {match.highlight && <span className={`text-[9px] font-black tracking-tighter ${match.color}`}>{match.highlight}</span>}
+                      </div>
                     </div>
+                    <div className="text-[12px] font-mono font-bold text-[#5a9cd6]">{match.kda}</div>
+                    <div className="text-[10px] text-gray-500 italic">vs <span className="text-gray-300 font-semibold not-italic">{match.vs}</span></div>
                   </div>
-                  <div className="text-[12px] font-mono font-bold text-[#5a9cd6]">{match.kda}</div>
-                  <div className="text-[10px] text-gray-500">vs <span className="text-gray-300 font-semibold">{match.vs}</span></div>
+                  
+                  {match.build && (
+                    <div className="flex gap-1 mt-1 pt-1 border-t border-[#2b2d31]">
+                      {match.build.map((item, i) => (
+                        <div key={i} title={item} className="w-5 h-5 bg-[#2b2d31] rounded-sm flex items-center justify-center text-[7px] text-gray-400 border border-[#3b3d41] cursor-help hover:border-gray-500">
+                          {item.substring(0, 2)}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
