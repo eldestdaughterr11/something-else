@@ -79,29 +79,37 @@ const LiquiContent = () => {
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
-            <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3">Player Stats</h3>
-            <ul className="list-disc pl-6 text-[14px] space-y-2">
+            <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-1 border-l-2 border-[#1a3b68]">Player Stats</h3>
+            <ul className="list-disc pl-6 text-[14px] space-y-2 text-gray-300">
               <li>Had the most kills in <span className="liqui-link">MPL Philippines Season 17</span> (<b>254</b>).</li>
               <li>Recorded the second highest KDA (<b>9.85</b>), just behind <span className="liqui-link">Teddy</span> (10.15) in <span className="liqui-link">MPL Philippines Season 17</span>.</li>
+              <li>Achieved a career-high <b>Maniac</b> using <span className="liqui-link">Suyou</span> against Team Liquid PH.</li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3">Most Played Heroes</h3>
-            <div className="flex gap-2 flex-wrap">
+            <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-1 border-l-2 border-[#1a3b68]">Recent Match Performance</h3>
+            <div className="space-y-2">
               {[
-                { name: 'Fanny', src: '/Fanny.webp', games: 42, winrate: '88%' },
-                { name: 'Fredrinn', src: '/Fredrinn.webp', games: 35, winrate: '74%' },
-                { name: 'Hayabusa', src: '/Hayabusa.webp', games: 28, winrate: '82%' },
-                { name: 'Lancelot', src: '/Lancelot.webp', games: 25, winrate: '100%' },
-                { name: 'Suyou', src: '/Suyou.webp', games: 18, winrate: '94%' }
-              ].map((hero) => (
-                <div key={hero.name} className="flex flex-col items-center bg-[#1e2024] p-2 rounded border border-[#2b2d31] w-[64px] hover:border-[#5a9cd6] transition-colors group">
-                  <img src={hero.src} alt={hero.name} className="w-10 h-10 rounded-sm object-cover mb-1 border border-[#3b3d41]" />
-                  <span className="text-[10px] text-white font-bold truncate w-full text-center">{hero.name}</span>
-                  <span className="text-[9px] text-green-500 font-mono">{hero.winrate}</span>
+                { hero: 'Suyou', img: '/Suyou.webp', kda: '8/0/2', vs: 'Team Liquid PH', highlight: 'MANIAC', color: 'text-purple-400' },
+                { hero: 'Lancelot', img: '/Lancelot.webp', kda: '3/0/6', vs: 'ONIC PH' },
+                { hero: 'Fanny', img: '/Fanny.webp', kda: '16/0/3', vs: 'Aurora PH' },
+                { hero: 'Hayabusa', img: '/Hayabusa.webp', kda: '7/2/5', vs: 'Team Liquid PH' },
+                { hero: 'Fredrinn', img: '/Fredrinn.webp', kda: '2/1/12', vs: 'Team Liquid PH' },
+                { hero: 'Suyou', img: '/Suyou.webp', kda: '20/1/8', vs: 'Twisted Minds' }
+              ].map((match, idx) => (
+                <div key={idx} className="flex items-center justify-between bg-[#1e2024] p-2 rounded border border-[#2b2d31] hover:bg-[#2a2d32] transition-colors">
+                  <div className="flex items-center gap-2">
+                    <img src={match.img} alt={match.hero} className="w-8 h-8 rounded-sm object-cover border border-[#3b3d41]" />
+                    <div className="flex flex-col">
+                      <span className="text-[11px] font-bold text-white">{match.hero}</span>
+                      {match.highlight && <span className={`text-[9px] font-black tracking-tighter ${match.color}`}>{match.highlight}</span>}
+                    </div>
+                  </div>
+                  <div className="text-[12px] font-mono font-bold text-[#5a9cd6]">{match.kda}</div>
+                  <div className="text-[10px] text-gray-500">vs <span className="text-gray-300 font-semibold">{match.vs}</span></div>
                 </div>
               ))}
             </div>
