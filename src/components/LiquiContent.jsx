@@ -78,10 +78,35 @@ const LiquiContent = () => {
             <span className="text-[11px] text-[#5a9cd6] font-normal cursor-pointer hover:underline">[edit]</span>
           </h2>
         </div>
-        <ul className="list-disc pl-6 text-[14px] space-y-1">
-          <li>Had the most kills in <span className="liqui-link">MPL Philippines Season 17</span> (<b>254</b>).</li>
-          <li>Recorded the second highest KDA (<b>9.85</b>), just behind <span className="liqui-link">Teddy</span> (10.15) in <span className="liqui-link">MPL Philippines Season 17</span>.</li>
-        </ul>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3">Player Stats</h3>
+            <ul className="list-disc pl-6 text-[14px] space-y-2">
+              <li>Had the most kills in <span className="liqui-link">MPL Philippines Season 17</span> (<b>254</b>).</li>
+              <li>Recorded the second highest KDA (<b>9.85</b>), just behind <span className="liqui-link">Teddy</span> (10.15) in <span className="liqui-link">MPL Philippines Season 17</span>.</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3">Most Played Heroes</h3>
+            <div className="flex gap-2 flex-wrap">
+              {[
+                { name: 'Fanny', src: '/Fanny.webp', games: 42, winrate: '88%' },
+                { name: 'Fredrinn', src: '/Fredrinn.webp', games: 35, winrate: '74%' },
+                { name: 'Hayabusa', src: '/Hayabusa.webp', games: 28, winrate: '82%' },
+                { name: 'Lancelot', src: '/Lancelot.webp', games: 25, winrate: '100%' },
+                { name: 'Suyou', src: '/Suyou.webp', games: 18, winrate: '94%' }
+              ].map((hero) => (
+                <div key={hero.name} className="flex flex-col items-center bg-[#1e2024] p-2 rounded border border-[#2b2d31] w-[64px] hover:border-[#5a9cd6] transition-colors group">
+                  <img src={hero.src} alt={hero.name} className="w-10 h-10 rounded-sm object-cover mb-1 border border-[#3b3d41]" />
+                  <span className="text-[10px] text-white font-bold truncate w-full text-center">{hero.name}</span>
+                  <span className="text-[9px] text-green-500 font-mono">{hero.winrate}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Achievements Section */}

@@ -71,14 +71,27 @@ const LiquiInfobox = () => {
           <div className="w-[100px] font-semibold text-gray-400">Approx. Total Winnings:</div>
           <div className="flex-1 font-bold text-white">$427,071</div>
         </div>
-        <div className="flex items-center">
-          <div className="w-[100px] font-semibold text-gray-400">Signature Heroes:</div>
-          <div className="flex-1 flex gap-1">
-             <img src="/Fanny.webp" alt="Fanny" className="w-6 h-6 rounded-sm object-cover border border-[#2b2d31]" />
-             <img src="/Fredrinn.webp" alt="Fredrinn" className="w-6 h-6 rounded-sm object-cover border border-[#2b2d31]" />
-             <img src="/Hayabusa.webp" alt="Hayabusa" className="w-6 h-6 rounded-sm object-cover border border-[#2b2d31]" />
-             <img src="/Lancelot.webp" alt="Lancelot" className="w-6 h-6 rounded-sm object-cover border border-[#2b2d31]" />
-             <img src="/Suyou.webp" alt="Suyou" className="w-6 h-6 rounded-sm object-cover border border-[#2b2d31]" />
+        <div className="mt-2 p-2 bg-[#1a1b1e] rounded border border-[#2b2d31]">
+          <div className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-2 px-1">Signature Heroes</div>
+          <div className="flex justify-between items-center px-1">
+             {[
+               { name: 'Fanny', src: '/Fanny.webp' },
+               { name: 'Fredrinn', src: '/Fredrinn.webp' },
+               { name: 'Hayabusa', src: '/Hayabusa.webp' },
+               { name: 'Lancelot', src: '/Lancelot.webp' },
+               { name: 'Suyou', src: '/Suyou.webp' }
+             ].map((hero) => (
+               <div key={hero.name} className="group relative">
+                 <div className="p-[1px] bg-[#3b3d41] rounded-sm border border-[#4b4d51] group-hover:border-[#5a9cd6] transition-all transform group-hover:scale-105">
+                    <img 
+                      src={hero.src} 
+                      alt={hero.name} 
+                      title={hero.name}
+                      className="w-[38px] h-[38px] rounded-sm object-cover bg-black" 
+                    />
+                 </div>
+               </div>
+             ))}
           </div>
         </div>
       </div>
