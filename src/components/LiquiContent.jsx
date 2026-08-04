@@ -165,7 +165,7 @@ const LiquiContent = () => {
                 <td className="p-2 border-r border-[#2b2d31] font-bold text-[#c0c0c0] bg-[#c0c0c0]/10">2nd</td>
                 <td className="p-2 border-r border-[#2b2d31]">A-Tier</td>
                 <td className="p-2 border-r border-[#2b2d31] liqui-link text-white">MPL Philippines Season 17</td>
-                <td className="p-2 border-r border-[#2b2d31]">TLPH</td>
+                <td className="p-2 border-r border-[#2b2d31]">FLCN</td>
                 <td className="p-2 border-r border-[#2b2d31] text-center">2 : 4</td>
                 <td className="p-2 text-right font-mono">$31,560</td>
               </tr>
