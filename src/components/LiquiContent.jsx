@@ -161,6 +161,15 @@ const LiquiContent = () => {
             </thead>
             <tbody className="liqui-bg-panel text-gray-300">
               <tr className="border-t border-[#2b2d31] hover:bg-[#2a2d32]">
+                <td className="p-2 border-r border-[#2b2d31]">2026-05-31</td>
+                <td className="p-2 border-r border-[#2b2d31] font-bold text-[#c0c0c0] bg-[#c0c0c0]/10">2nd</td>
+                <td className="p-2 border-r border-[#2b2d31]">A-Tier</td>
+                <td className="p-2 border-r border-[#2b2d31] liqui-link text-white">MPL Philippines Season 17</td>
+                <td className="p-2 border-r border-[#2b2d31]">TLPH</td>
+                <td className="p-2 border-r border-[#2b2d31] text-center">2 : 4</td>
+                <td className="p-2 text-right font-mono">$31,560</td>
+              </tr>
+              <tr className="border-t border-[#2b2d31] hover:bg-[#2a2d32]">
                 <td className="p-2 border-r border-[#2b2d31]">2026-01-15</td>
                 <td className="p-2 border-r border-[#2b2d31] font-bold text-[#ffd700] bg-[#ffd700]/10">1st</td>
                 <td className="p-2 border-r border-[#2b2d31]">S-Tier</td>
