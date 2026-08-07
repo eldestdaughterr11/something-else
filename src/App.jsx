@@ -17,7 +17,7 @@ function App() {
         <div className="w-full max-w-[1400px] flex px-4">
           <LiquiSidebar />
           
-          <div className="flex-1 flex px-6 gap-6">
+          <div className="flex-1 flex flex-col lg:flex-row px-4 lg:px-6 gap-6">
             <LiquiContent />
             <LiquiInfobox />
           </div>
