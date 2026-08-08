@@ -18,8 +18,12 @@ function App() {
           <LiquiSidebar />
           
           <div className="flex-1 flex flex-col lg:flex-row px-4 lg:px-6 gap-6">
-            <LiquiContent />
-            <LiquiInfobox />
+            <div className="order-2 lg:order-1 flex-1 min-w-0">
+              <LiquiContent />
+            </div>
+            <div className="order-1 lg:order-2">
+              <LiquiInfobox />
+            </div>
           </div>
         </div>
       </div>
