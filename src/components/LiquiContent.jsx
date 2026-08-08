@@ -48,7 +48,7 @@ const LiquiContent = () => {
 
       {/* Intro Text */}
       <div className="text-[14px] leading-relaxed mb-6">
-        Van <b>"VanTzy"</b> Navarez (born August 11, 2003) is a <span className="liqui-link">Filipino</span> player who is currently playing as a Jungler for <span className="liqui-link font-bold text-white">Team Falcons PH</span>.<br/><br/>
+        Van <b>"VanTzy"</b> Navarez (born August 11, 2005) is a <span className="liqui-link">Filipino</span> player who is currently playing as a Jungler for <span className="liqui-link font-bold text-white">Team Falcons PH</span>.<br/><br/>
         Following his dominant victory at the <span className="liqui-link">MPL ASEAN Champions Cup 2026</span>, he is widely recognized as the number one top-tier Jungler in the world. <sup className="liqui-link">[1]</sup>
       </div>
 
