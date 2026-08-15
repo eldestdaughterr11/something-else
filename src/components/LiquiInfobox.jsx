@@ -42,7 +42,7 @@ const LiquiInfobox = () => {
         </div>
         <div className="flex">
           <div className="w-[100px] font-semibold text-gray-400">Born:</div>
-          <div className="flex-1">August 11, 2005 (age 20)</div>
+          <div className="flex-1">August 11, 2005 (age 21)</div>
         </div>
         <div className="flex">
           <div className="w-[100px] font-semibold text-gray-400">Status:</div>
