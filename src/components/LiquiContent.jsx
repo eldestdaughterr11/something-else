@@ -94,7 +94,7 @@ const LiquiContent = () => {
             <div className="space-y-2">
               {[
                 { hero: 'Ling', img: '/Ling.jpg', kda: '6/1/4', vs: 'Guangzhou Gaming' },
-                { hero: 'Hirara', img: '/Hirara.jpg', kda: '8/0/5', vs: 'Team Falcons MENA' },
+                { hero: 'Hirara', img: '/Hirara.png', kda: '8/0/5', vs: 'Team Falcons MENA' },
                 { hero: 'Fanny', img: '/Fanny.webp', kda: '6/1/2', vs: 'Team Vitality' },
                 { 
                   hero: 'Suyou', 
