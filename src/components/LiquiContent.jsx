@@ -93,22 +93,23 @@ const LiquiContent = () => {
             <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-1 border-l-2 border-[#1a3b68]">Recent Match Performance</h3>
             <div className="space-y-2">
               {[
-                { hero: 'Ling', img: '/Ling.jpg', kda: '6/1/4', vs: 'Guangzhou Gaming' },
-                { hero: 'Hirara', img: '/Hirara.png', kda: '8/0/5', vs: 'Team Falcons MENA' },
-                { hero: 'Fanny', img: '/Fanny.webp', kda: '6/1/2', vs: 'Team Vitality' },
+                { hero: 'Ling', img: '/Ling.jpg', kda: '6/1/4', vs: 'Guangzhou Gaming', tournament: 'MSC at EWC 2026 Paris' },
+                { hero: 'Hirara', img: '/Hirara.png', kda: '8/0/5', vs: 'Team Falcons MENA', tournament: 'MSC at EWC 2026 Paris' },
+                { hero: 'Fanny', img: '/Fanny.webp', kda: '6/1/2', vs: 'Team Vitality', tournament: 'MSC at EWC 2026 Paris' },
                 { 
                   hero: 'Suyou', 
                   img: '/Suyou.webp', 
                   kda: '8/0/2', 
                   vs: 'Team Liquid PH', 
+                  tournament: 'MPL Philippines Season 17',
                   highlight: 'MANIAC', 
                   color: 'text-purple-400'
                 },
-                { hero: 'Lancelot', img: '/Lancelot.webp', kda: '3/0/6', vs: 'ONIC PH' },
-                { hero: 'Fanny', img: '/Fanny.webp', kda: '16/0/3', vs: 'Aurora PH' },
-                { hero: 'Hayabusa', img: '/Hayabusa.webp', kda: '7/2/5', vs: 'Omega Esports' },
-                { hero: 'Fredrinn', img: '/Fredrinn.webp', kda: '2/1/12', vs: 'Omega Esports' },
-                { hero: 'Suyou', img: '/Suyou.webp', kda: '20/1/8', vs: 'Twisted Minds' }
+                { hero: 'Lancelot', img: '/Lancelot.webp', kda: '3/0/6', vs: 'ONIC PH', tournament: 'MPL Philippines Season 17' },
+                { hero: 'Fanny', img: '/Fanny.webp', kda: '16/0/3', vs: 'Aurora PH', tournament: 'MPL Philippines Season 17' },
+                { hero: 'Hayabusa', img: '/Hayabusa.webp', kda: '7/2/5', vs: 'Omega Esports', tournament: 'MPL Philippines Season 17' },
+                { hero: 'Fredrinn', img: '/Fredrinn.webp', kda: '2/1/12', vs: 'Omega Esports', tournament: 'MPL Philippines Season 17' },
+                { hero: 'Suyou', img: '/Suyou.webp', kda: '20/1/8', vs: 'Twisted Minds', tournament: 'MPL Philippines Season 17' }
               ].map((match, idx) => (
                 <div key={idx} className="flex flex-col bg-[#1e2024] p-2 rounded border border-[#2b2d31] hover:bg-[#2a2d32] transition-colors gap-2">
                   <div className="flex items-center justify-between">
@@ -120,7 +121,10 @@ const LiquiContent = () => {
                       </div>
                     </div>
                     <div className="text-[12px] font-mono font-bold text-[#5a9cd6]">{match.kda}</div>
-                    <div className="text-[10px] text-gray-500 italic">vs <span className="text-gray-300 font-semibold not-italic">{match.vs}</span></div>
+                    <div className="flex max-w-[145px] flex-col items-end text-right">
+                      <div className="text-[10px] text-gray-500 italic">vs <span className="text-gray-300 font-semibold not-italic">{match.vs}</span></div>
+                      <span className="mt-0.5 text-[8px] leading-tight text-[#5a9cd6]">{match.tournament}</span>
+                    </div>
                   </div>
                 </div>
               ))}
