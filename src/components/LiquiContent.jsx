@@ -99,8 +99,7 @@ const LiquiContent = () => {
                   kda: '8/0/2', 
                   vs: 'Team Liquid PH', 
                   highlight: 'MANIAC', 
-                  color: 'text-purple-400',
-                  build: ['Flame Retri', 'Hunter Strike', 'Heptaseas', 'Malefic Roar', 'Queen\'s Wings', 'BoD']
+                  color: 'text-purple-400'
                 },
                 { hero: 'Lancelot', img: '/Lancelot.webp', kda: '3/0/6', vs: 'ONIC PH' },
                 { hero: 'Fanny', img: '/Fanny.webp', kda: '16/0/3', vs: 'Aurora PH' },
@@ -120,16 +119,6 @@ const LiquiContent = () => {
                     <div className="text-[12px] font-mono font-bold text-[#5a9cd6]">{match.kda}</div>
                     <div className="text-[10px] text-gray-500 italic">vs <span className="text-gray-300 font-semibold not-italic">{match.vs}</span></div>
                   </div>
-                  
-                  {match.build && (
-                    <div className="flex gap-1 mt-1 pt-1 border-t border-[#2b2d31]">
-                      {match.build.map((item, i) => (
-                        <div key={i} title={item} className="w-5 h-5 bg-[#2b2d31] rounded-sm flex items-center justify-center text-[7px] text-gray-400 border border-[#3b3d41] cursor-help hover:border-gray-500">
-                          {item.substring(0, 2)}
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
