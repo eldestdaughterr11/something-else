@@ -117,6 +117,9 @@ const LiquiInfobox = () => {
          <div className="text-[#ffd700] text-xs font-bold">
             Finals MVP (MDL Philippines Season 5)
          </div>
+         <div className="text-white text-xs font-semibold">
+            Rising Star of the Season (MPL Philippines Season 17)
+         </div>
       </div>
 
       <div className="bg-[#1a3b68] text-white text-center font-bold py-1 border-y border-[#2b2d31]">
