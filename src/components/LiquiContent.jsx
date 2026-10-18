@@ -90,7 +90,7 @@ const LiquiContent = () => {
           </div>
           
           <div>
-            <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-1 border-l-2 border-[#1a3b68]">Recent Match Performance</h3>
+            <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-1 border-l-2 border-[#1a3b68]">Best Match Performance</h3>
             <div className="space-y-2">
               {[
                 { hero: 'Nolan', img: '/Nolan.jpg', kda: '10/0/4', vs: 'ONIC PH', tournament: 'MPL Philippines Season 18' },
