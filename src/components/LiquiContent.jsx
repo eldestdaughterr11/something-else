@@ -93,6 +93,7 @@ const LiquiContent = () => {
             <h3 className="text-[14px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-1 border-l-2 border-[#1a3b68]">Recent Match Performance</h3>
             <div className="space-y-2">
               {[
+                { hero: 'Nolan', img: '/Nolan.jpg', kda: '10/0/4', vs: 'ONIC PH', tournament: 'MPL Philippines Season 18' },
                 { hero: 'Ling', img: '/Ling.jpg', kda: '6/1/4', vs: 'Guangzhou Gaming', tournament: 'MSC at EWC 2026 Paris' },
                 { hero: 'Hirara', img: '/Hirara.png', kda: '8/0/5', vs: 'Team Falcons MENA', tournament: 'MSC at EWC 2026 Paris' },
                 { hero: 'Fanny', img: '/Fanny.webp', kda: '6/1/2', vs: 'Team Vitality', tournament: 'MSC at EWC 2026 Paris' },
