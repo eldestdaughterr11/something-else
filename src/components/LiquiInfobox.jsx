@@ -76,7 +76,7 @@ const LiquiInfobox = () => {
           <div className="flex justify-between items-center px-1">
              {[
                { name: 'Fanny', src: '/Fanny.webp' },
-               { name: 'Hayabusa', src: '/Hayabusa.webp' },
+                { name: 'Nolan', src: '/Nolan.jpg' },
                { name: 'Lancelot', src: '/Lancelot.webp' },
                { name: 'Ling', src: '/Ling.jpg' },
                { name: 'Suyou', src: '/Suyou.webp' }
